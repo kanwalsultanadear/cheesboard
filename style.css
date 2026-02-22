@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #eee;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    border: 4px solid #333;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    position: relative;
+}
+
+.square input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 70%;
+    cursor: pointer;
+}
+
+.square span {
+    transition: transform 0.2s;
+}
+
+
+.square input:checked + span {
+    transform: scale(1.5);
+    color: rgb(222, 210, 235); 
+}
+
+.white {
+    background: #f0d9b5;
+}
+
+.black {
+    background: #b58863;
+}
